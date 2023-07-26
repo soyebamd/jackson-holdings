@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -3765,7 +3767,7 @@ textarea.form-control-lg {
 .nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
-  --bs-nav-link-font-size: 0.95rem;
+  --bs-nav-link-font-size: 0.875rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -3964,7 +3966,7 @@ textarea.form-control-lg {
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
-  --bs-nav-link-font-size: 0.95rem;
+  --bs-nav-link-font-size: 0.875rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-navbar-color);
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
@@ -11982,6 +11984,39 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  font-family: "Comfortaa", cursive;
+  line-height: 1.5;
+  color: #242427;
+}
+
+.main-color {
+  color: #0a4030;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+}
+
+.blog-text {
+  font-size: 1rem;
+  max-width: 389px !important;
+}
+
+.title {
+  position: relative;
+}
+.title::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 72px !important;
+  margin: 16px 0 !important;
+  height: 1px;
+  background: #0a4030;
+}
+
 a {
   text-decoration: none;
 }
@@ -12000,6 +12035,10 @@ a {
   transition: 200ms all;
 }
 
+.nav-link {
+  color: #0a4030;
+}
+
 .site-header--medium {
   padding: 8px 0;
 }
@@ -12015,9 +12054,10 @@ a {
   max-width: 214px;
   height: 54px;
   width: 100%;
+  font-family: "Libre Baskerville", serif;
   font-size: 0.92rem;
   border-radius: 0;
-  padding: 0.8125rem;
+  padding: 0.875rem;
 }
 
 .btn-primary {
@@ -12064,4 +12104,38 @@ a {
   background-color: #fff;
   opacity: 0.7;
   z-index: 1;
+}
+
+.about-us {
+  background: #d4dad4 !important;
+}
+.about-us .h1 {
+  color: #0a4030;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12.3px;
+  font-family: "Comfortaa", cursive;
+}
+
+.card-wrapper .card-img, .card-wrapper .card-img-top {
+  border-radius: 0;
+}
+.card-wrapper .card {
+  border-radius: 0;
+  max-width: 25rem;
+  width: 100%;
+  cursor: pointer;
+}
+.card-wrapper .card .card-text {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #0a4030;
+}
+.card-wrapper .card img {
+  max-height: 200px;
+  transition: all 600ms;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-wrapper .card:hover img {
+  opacity: 0.7;
 }/*# sourceMappingURL=main.css.map */
