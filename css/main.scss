@@ -7,9 +7,11 @@ $navbar-padding-x: 25px;
 
 $navbar-nav-link-padding-x: 15px;
 
-$nav-link-font-size:.875rem;
+$nav-link-font-size:1rem;
 
-$color_main : #0a4030;
+$primary_color : #0a4030;
+$secondary_color : #0a4936;
+
 
 
 
@@ -20,22 +22,38 @@ $color_main : #0a4030;
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap');
 
 
+@font-face {
+    font-family: Geosans;
+    src: url(../assets/fonts/GeosansLight.ttf);
+}
 
+
+@font-face {
+    font-family: Geosans;
+    src: url(../assets/fonts/GeosansLight-Oblique.ttf);
+    font-style: italic;
+}
 
 //Rest code below
 
-body{font-family: 'Comfortaa', cursive; line-height: 1.5;     color: #242427;
+
+
+html{ font-size: 1rem;}
+
+body{
+    
+    font-family: Geosans;  line-height: 1.5;     color: #242427; font-size: 1.25rem;
     
 }
 
-.main-color{ color:$color_main;}
+.main-color{ color:$primary_color;}
 
 h1, h2, h3, h4, h5, h6{font-family: 'Libre Baskerville', serif; font-weight: 400; }
 
-.blog-text{ font-size: 1rem; max-width: 389px!important;}
+.blog-text{ max-width: 389px!important;}
 
 .title{ position: relative;
 
@@ -62,15 +80,15 @@ a{ text-decoration: none;}
     border-color: #c1c1c1 #c1c1c1 #0a4030!important;
     border-width: 0 0 2px!important;
 
-    .site-header__logo{ img { max-width: 142px; width:100%; transition: 200ms all; }}
+    .site-header__logo{ img { max-width: 200px; width:100%; transition: 200ms all; }}
 }
 
-.nav-link{color:$color_main; }
+.nav-link{color:$primary_color; }
 
 .site-header--medium{
     padding:8px 0; 
     .site-header__logo{ img{
-    width: 35%!important;
+    max-width: 150px!important;
     }}
 
     .btn-primary.m-2{ margin:0.2rem!important; transition: 200ms all;}
@@ -79,7 +97,7 @@ a{ text-decoration: none;}
 .btn{max-width: 214px;
     height: 54px;
     width: 100%; font-family: 'Libre Baskerville', serif; 
-    font-size: .92rem;
+   
     border-radius: 0;
     padding: 0.875rem;}
 
@@ -100,7 +118,7 @@ a{ text-decoration: none;}
     
         color: #0a4030;
         text-transform: uppercase;
-        font-size: 1.6rem;
+        font-size: 1.6rem; font-family: Arial, Helvetica, sans-serif;
         opacity: 0;
         font-weight: bolder; transition: .2s ease-in-out;
       }
@@ -137,7 +155,7 @@ a{ text-decoration: none;}
     
 .about-us{ background:#d4dad4!important; 
 
-    .h1{color:$color_main; text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12.3px;    font-family: 'Comfortaa', cursive;  
+    .h1{color:$primary_color; text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12.3px;    font-family: Geosans;  
     }
 
     
@@ -152,7 +170,7 @@ a{ text-decoration: none;}
         
 
 
-           .card-text {font-family: 'Libre Baskerville', serif; font-weight: 400; font-size: 25px; color:$color_main;}
+           .card-text {font-family: 'Libre Baskerville', serif; font-weight: 400; font-size: 1.625rem; color:$primary_color;}
 
            img{max-height: 200px;
             transition:all 600ms; 
@@ -167,3 +185,24 @@ a{ text-decoration: none;}
 
 
     }
+
+.contact-us{
+    
+    .g-5, .gy-5 {
+        --bs-gutter-y: 5.5rem!important;
+      }
+      .g-5, .gx-5 {
+        --bs-gutter-x: 5.5rem!important;
+      }
+    }
+
+
+    // .row.g-50 {
+
+    //     margin-left:3.125rem; margin-right:3.125rem; 
+
+
+    // }
+
+    
+    // .row.g-50 > *{ padding-left:3.125rem; padding-right:3.125rem; }

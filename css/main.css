@@ -6,7 +6,6 @@
  */
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -3767,7 +3766,7 @@ textarea.form-control-lg {
 .nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
-  --bs-nav-link-font-size: 0.875rem;
+  --bs-nav-link-font-size: 1rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -3966,7 +3965,7 @@ textarea.form-control-lg {
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
-  --bs-nav-link-font-size: 0.875rem;
+  --bs-nav-link-font-size: 1rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-navbar-color);
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
@@ -11984,10 +11983,24 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: Geosans;
+  src: url(../assets/fonts/GeosansLight.ttf);
+}
+@font-face {
+  font-family: Geosans;
+  src: url(../assets/fonts/GeosansLight-Oblique.ttf);
+  font-style: italic;
+}
+html {
+  font-size: 1rem;
+}
+
 body {
-  font-family: "Comfortaa", cursive;
+  font-family: Geosans;
   line-height: 1.5;
   color: #242427;
+  font-size: 1.25rem;
 }
 
 .main-color {
@@ -12000,7 +12013,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .blog-text {
-  font-size: 1rem;
   max-width: 389px !important;
 }
 
@@ -12030,7 +12042,7 @@ a {
   border-width: 0 0 2px !important;
 }
 .site-header .site-header__logo img {
-  max-width: 142px;
+  max-width: 200px;
   width: 100%;
   transition: 200ms all;
 }
@@ -12043,7 +12055,7 @@ a {
   padding: 8px 0;
 }
 .site-header--medium .site-header__logo img {
-  width: 35% !important;
+  max-width: 150px !important;
 }
 .site-header--medium .btn-primary.m-2 {
   margin: 0.2rem !important;
@@ -12055,7 +12067,6 @@ a {
   height: 54px;
   width: 100%;
   font-family: "Libre Baskerville", serif;
-  font-size: 0.92rem;
   border-radius: 0;
   padding: 0.875rem;
 }
@@ -12082,6 +12093,7 @@ a {
   color: #0a4030;
   text-transform: uppercase;
   font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
   opacity: 0;
   font-weight: bolder;
   transition: 0.2s ease-in-out;
@@ -12112,7 +12124,7 @@ a {
 .about-us .h1 {
   color: #0a4030;
   text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12.3px;
-  font-family: "Comfortaa", cursive;
+  font-family: Geosans;
 }
 
 .card-wrapper .card-img, .card-wrapper .card-img-top {
@@ -12127,7 +12139,7 @@ a {
 .card-wrapper .card .card-text {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 1.625rem;
   color: #0a4030;
 }
 .card-wrapper .card img {
@@ -12138,4 +12150,11 @@ a {
 }
 .card-wrapper .card:hover img {
   opacity: 0.7;
+}
+
+.contact-us .g-5, .contact-us .gy-5 {
+  --bs-gutter-y: 5.5rem!important;
+}
+.contact-us .g-5, .contact-us .gx-5 {
+  --bs-gutter-x: 5.5rem!important;
 }/*# sourceMappingURL=main.css.map */
