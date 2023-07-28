@@ -263,9 +263,9 @@ a{ text-decoration: none;}
 }
 
 
-.site-footer{ background:$secondary_color; color:#fff; a{  color:#fff; }}
+.site-footer{ background-color: #000000fa;  color:#fff; a{  color:#fff; }}
 
-.site-footer__bottom{ background:rgba(0,0,0,.3)}
+.site-footer__bottom{ background:rgba(0,0,0,1)}
 
 .social-icons{
 
@@ -328,7 +328,53 @@ a{ text-decoration: none;}
 }
 
 
+#map{ position: relative; cursor: pointer;
+    &::after{
+        @include overlay(rgba(0,0,0,0));
+        opacity: 0;
 
+    }
+
+}
+
+.thumbs{
+
+
+    a{
+
+    
+
+
+         
+          
+          
+          img{object-fit: cover; height: 200px; width: 250px; margin:0 5px;
+    
+    
+       
+        
+          }
+
+      
+        
+
+    }
+
+
+}
+.move{ opacity: 0;}
+
+
+.move:first-child{transform: translateX(-100%);
+    }
+
+    .move:last-child{transform: translateX(100%);
+           }
+
+
+.moveFromLeft{animation: moveFromLeft 1s ease-in-Out 500ms;  animation-fill-mode: backwards; }
+
+.moveFromRight{animation: moveFromRight 1s ease-in-Out 500ms;  animation-fill-mode: backwards; } 
 
 @keyframes moveUp{
 
@@ -338,6 +384,33 @@ a{ text-decoration: none;}
     }
 
     100%{transform: translateY(0);
+        opacity: 1;}
+    
+}
+
+
+@keyframes moveFromLeft{
+
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100%{transform: translateX(0);
+        opacity: 1;}
+    
+}
+
+
+
+@keyframes moveFromRight{
+
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100%{transform: translateX(0);
         opacity: 1;}
     
 }
